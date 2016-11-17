@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-select.component.css']
 })
 export class GameSelectComponent implements OnInit {
-
+  title = 'Game Select';
   constructor() { }
 
   ngOnInit() {
