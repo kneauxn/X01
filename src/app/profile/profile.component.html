@@ -1,7 +1,21 @@
 <html>
+<div class="container" *ngIf='games && games.length'>
 
-  <div class="container" *ngIf='games && games.length'>
   <h3><label for="">Board History</label></h3>
-  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>Game Number</th>
+      <th>Winner</th>
+      <th>Mode</th>
+    </tr>
+    </thead>
+    <tr *ngFor='let game of games'>
+      <td>{{game.gameNumber}}</td>
+      <td>{{game.gameWinner}}</td>
+      <td>{{game.gameType}}</td>
+    </tr>
+  </table>
 
+</div>
 </html>

@@ -9,18 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   title: string = 'Board History';
-//   games: any[] = [
-//     {
-//       "gameNumber": 1,
-//       "gameWinner": "Ryan",
-//       "gameType": "xyz"
-//     },
-//     {
-//       "gameNumber": 2,
-//       "gameWinner": "Ryan",
-//       "gameType": "xyz"
-//     }
-// ];
+  games: any[] = [
+    {
+      "gameNumber": 1,
+      "gameWinner": "Ryan",
+      "gameType": "xyz"
+    },
+    {
+      "gameNumber": 2,
+      "gameWinner": "Ryan",
+      "gameType": "xyz"
+    }
+];
 
   constructor() { }
 
