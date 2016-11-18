@@ -1,9 +1,14 @@
 <html>
-    <div class="container">
+    <div class="container" *ngIf='!chosenGame.length'>
 <h3><label for="">Game Select</label></h3>
-<input type="button" class="btn btn-primary" value="X01">
-<input type="button" class="btn btn-primary" value="Cricket">
-<input type="button" class="btn btn-primary" value="Around The Clock">
+<button class='btn btn-primary'
+(click)='setGameType1()'>  X01  </button>
+
+<button class='btn btn-primary'
+(click)='setGameType2()'>  Cricket  </button>
+
+<button class='btn btn-primary'
+(click)='setGameType3()'>  Around the Clock  </button>
 
 
 </div>
