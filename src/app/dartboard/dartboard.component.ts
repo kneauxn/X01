@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dartboard.component.css']
 })
 export class DartboardComponent implements OnInit {
-  title: 'Dartboard';
-  constructor() { }
+  chosenGame: string[] = [];
+
+  setGameType1(): void {
+    this.chosenGame[0] = 'X01';
+     
+  }
+  setGameType2(): void {
+    this.chosenGame[0] = 'Cricket';
+  }
+  setGameType3(): void {
+    this.chosenGame[0] = 'Around the World';
+  }
+  resetGame(): void {
+    this.chosenGame = [];
+  }
+
+constructor() { }
 
   ngOnInit() {
   }
-
 }
