@@ -5,14 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DartboardComponent } from './dartboard/dartboard.component';
-import { GameSelectComponent } from './game-select/game-select.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DartboardComponent,
-    GameSelectComponent,
     ProfileComponent
   ],
   imports: [
