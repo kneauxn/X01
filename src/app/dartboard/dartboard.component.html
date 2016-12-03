@@ -14,17 +14,11 @@
 
 <div class="container">
         <h2><label for="">{{chosenGame}}</label></h2>
-        <table>
-                <tr>
-                        <th><input type="text" value="" placeholder="throw 1"></th>
-                        <th><input type="text" value="" placeholder="throw 2"></th>
-                        <th><input type="text" value="" placeholder="throw 3"></th>
-                </tr>
-                <tr>
-                        <td colspan="3" align="right"><button type="button" class="btn btn-primary btn-block">End Turn</button></td>
-                </tr>
-                        <td colspan="3" align="right"><button (click)='resetGame()'type="button" class="btn btn-danger btn-block">End Game</button></td>
-        </table>
+        <input type="text" value="" placeholder="throw 1">
+        <input type="text" value="" placeholder="throw 2">
+        <input type="text" value="" placeholder="throw 3">
+        <button type="button" class="btn btn-primary btn-block">End Turn</button>
+        <button (click)='resetGame()'type="button" class="btn btn-danger btn-block">End Game</button>
 </div>
 
 </html>
