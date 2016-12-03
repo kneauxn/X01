@@ -16,7 +16,7 @@ export class DartboardComponent implements OnInit {
     this.chosenGame[0] = 'Cricket';
   }
   setGameType3(): void {
-    this.chosenGame[0] = 'Around the World';
+    this.chosenGame[0] = 'Around the Clock';
   }
   resetGame(): void {
     this.chosenGame = [];
