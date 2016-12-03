@@ -1,4 +1,5 @@
 <html>
+<!--GAME SELECT DIV-->
 <div class="container" *ngIf='!chosenGame.length'>
         <h3><label for="">Game Select</label></h3>
         <button class='btn btn-primary'
@@ -9,14 +10,24 @@
 
         <button class='btn btn-primary'
 (click)='setGameType3()'>  Around the Clock  </button>
-</div>
+</div><!--END OF GAME SELECT DIV-->
 
 
 <div class="container">
+        <!--NAME OF GAME THAT APPEARS ONLY WHEN GAME IS CHOSEN-->
         <h2><label for="">{{chosenGame}}</label></h2>
+<!--THROW VALUE INPUT ROW-->
+<div class="row">
+<div class="col-md-4">
         <input type="text" value="" placeholder="throw 1">
+</div>
+<div class="col-md-4">
         <input type="text" value="" placeholder="throw 2">
+</div>
+<div class="col-md-4">
         <input type="text" value="" placeholder="throw 3">
+</div>
+</div><!--END OF THROW VALUE INPUT ROW-->
         <button type="button" class="btn btn-primary btn-block">End Turn</button>
         <button (click)='resetGame()'type="button" class="btn btn-danger btn-block">End Game</button>
 </div>
