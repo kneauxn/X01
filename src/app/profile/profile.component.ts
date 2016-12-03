@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { IGame } from '../game'
 
 
 @Component({
@@ -9,16 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
   title: string = 'Board History';
-  games: any[] = [
+  games: IGame[] = [
     {
-      "gameNumber": 1,
-      "gameWinner": "Ryan",
-      "gameType": "xyz"
+    gameNumber: 1,
+    playerOne: "Ryan",
+    playerTwo: "Tyler",
+    playerOneScore: 301,
+    playerTwoScore: 298,
+    gameType: "X01",
+    gameWinner: "Ryan",
+    gameLoser: "Tyler"
     },
     {
-      "gameNumber": 2,
-      "gameWinner": "Ryan",
-      "gameType": "xyz"
+    gameNumber: 2,
+    playerOne: "Tyler",
+    playerTwo: "Jared",
+    playerOneScore: 22,
+    playerTwoScore: 15,
+    gameType: "Around the Clock",
+    gameWinner: "Tyler",
+    gameLoser: "Jared"
     }
 ];
 

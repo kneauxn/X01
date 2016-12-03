@@ -7,12 +7,14 @@
     <tr>
       <th>Game Number</th>
       <th>Winner</th>
+      <th>Loser</th>
       <th>Mode</th>
     </tr>
     </thead>
     <tr *ngFor='let game of games'>
       <td>{{game.gameNumber}}</td>
       <td>{{game.gameWinner}}</td>
+      <td>{{game.gameLoser}}</td>
       <td>{{game.gameType}}</td>
     </tr>
   </table>
