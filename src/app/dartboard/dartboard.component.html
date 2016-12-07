@@ -1,7 +1,7 @@
 <html>
 <!--GAME SELECT DIV-->
 <div class="container" *ngIf='!chosenGame.length'>
-        <h3><label for="">Game Select</label></h3>
+        <h2><label for="">Game Select</label></h2>
         <button class='btn btn-primary'
 (click)='setGameType1()'>  X01  </button>
 
@@ -14,8 +14,32 @@
 
 
 <div class="container">
-        <!--NAME OF GAME THAT APPEARS ONLY WHEN GAME IS CHOSEN-->
+<!--NAME OF GAME THAT APPEARS ONLY WHEN GAME IS CHOSEN-->
         <h2><label for="">{{chosenGame}}</label></h2>
+
+<!--X01 Game Interface-->
+<div class="container" *ngIf='chosenGame[0]==="X01"'>
+
+<app-x01>Loading X01</app-x01>
+
+</div>
+
+<!--Cricket Game Interface-->
+<div class="container" *ngIf='chosenGame[0]==="Cricket"'>
+
+<app-cricket>Loading Cricket</app-cricket>
+
+</div>
+
+<!--Around the Clock Game Interface-->
+<div class="container" *ngIf='chosenGame[0]==="Around the Clock"'>
+
+<app-around-the-clock>Loading Around The Clock</app-around-the-clock>
+
+</div>
+
+
+
 <!--THROW VALUE INPUT ROW-->
 
 <div class="row">

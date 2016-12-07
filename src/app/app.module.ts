@@ -6,12 +6,18 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { DartboardComponent } from './dartboard/dartboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AroundTheClockComponent } from './games/around-the-clock/around-the-clock.component';
+import { CricketComponent } from './games/cricket/cricket.component';
+import { X01Component } from './games/x01/x01.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DartboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    AroundTheClockComponent,
+    CricketComponent,
+    X01Component
   ],
   imports: [
     BrowserModule,
