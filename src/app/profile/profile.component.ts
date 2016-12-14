@@ -12,11 +12,12 @@ export class ProfileComponent implements OnInit {
   title: string = 'Board History';
   games: IGame[];
 
-  // constructor(private _historyService: HistoryService) {
+  constructor(private _historyService: HistoryService) {
     
-  // }
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.games = this._historyService.getGames();
   }
 
 }
