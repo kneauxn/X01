@@ -11,13 +11,17 @@ import { IGame } from '../game'
 export class ProfileComponent implements OnInit {
   title: string = 'Board History';
   games: IGame[];
+  errorMessage: string;
 
   constructor(private _historyService: HistoryService) {
     
   }
 
   ngOnInit(): void {
-    this.games = this._historyService.getGames();
+    this._historyService.getGames()
+      .subscribe(
+        games => this.games = games,
+        error => this.errorMessage = <any>error);
   }
 
 }
