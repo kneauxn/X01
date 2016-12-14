@@ -7,7 +7,6 @@ export class HistoryService {
   getGames(): IGame[] {
     return[
         {
-          "_id": "584e58bb9e03bc119a1578cb",
           "gameNumber": 1,
           "playerOne": "Ryan",
           "playerTwo": "Tyler",
@@ -18,7 +17,6 @@ export class HistoryService {
           "gameLoser": "Tyler"
         },
         {
-          "_id": "584e597e9e03bc119a1578cd",
           "gameNumber": 2,
           "playerOne": "Ryan",
           "playerTwo": "Tyler",
@@ -29,7 +27,6 @@ export class HistoryService {
           "gameLoser": "Ryan"
         },
         {
-          "_id": "585114209e03bc0f70becbd8",
           "gameNumber": 3,
           "playerOne": "Ryan",
           "playerTwo": "Jared",
@@ -40,6 +37,6 @@ export class HistoryService {
           "gameLoser": "Ryan"
         }]
     };
-  constructor(privet _http: Http) { }
+  constructor(private _http: Http) { }
 
 }

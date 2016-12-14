@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HistoryService } from '../service/history.service'
 import { IGame } from '../game'
 
 
@@ -11,7 +12,9 @@ export class ProfileComponent implements OnInit {
   title: string = 'Board History';
   games: IGame[];
 
-  constructor() { }
+  // constructor(private _historyService: HistoryService) {
+    
+  // }
 
   ngOnInit() {
   }
