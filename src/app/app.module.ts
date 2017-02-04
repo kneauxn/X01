@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AroundTheClockComponent } from './games/around-the-clock/around-the-clock.component';
 import { CricketComponent } from './games/cricket/cricket.component';
 import { X01Component } from './games/x01/x01.component';
+import { GameHistoryComponent } from './game-history/game-history.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { X01Component } from './games/x01/x01.component';
     ProfileComponent,
     AroundTheClockComponent,
     CricketComponent,
-    X01Component
+    X01Component,
+    GameHistoryComponent
   ],
   imports: [
     BrowserModule,
