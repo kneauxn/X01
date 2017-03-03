@@ -1,11 +1,15 @@
 <html>
-  <div class="container-fluid">
-<h1>
-  Dartboard Scorecard
-</h1>
-<app-dartboard>Loading...</app-dartboard>
+<!--<a [routerLink]="['']">-->
+  <h1>
+    Dartboard Scorecard
+  </h1>
+<!--</a>-->
+
+<app-dartboard></app-dartboard>
+
+<router-outlet></router-outlet>
 
 <app-profile>Loading...</app-profile>
 
-  </div>
+<app-game-history></app-game-history>
 </html>

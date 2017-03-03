@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import  { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DartboardComponent } from './dartboard/dartboard.component';
@@ -24,7 +25,13 @@ import { GameHistoryComponent } from './game-history/game-history.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule.forRoot([
+      {path: 'X01', component: X01Component},
+      {path: 'Cricket', component: CricketComponent},
+      {path: 'AroundTheClock', component: AroundTheClockComponent},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
