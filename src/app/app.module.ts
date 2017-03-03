@@ -11,6 +11,8 @@ import { AroundTheClockComponent } from './games/around-the-clock/around-the-clo
 import { CricketComponent } from './games/cricket/cricket.component';
 import { X01Component } from './games/x01/x01.component';
 import { GameHistoryComponent } from './game-history/game-history.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { GameSelectComponent } from './game-select/game-select.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { GameHistoryComponent } from './game-history/game-history.component';
     AroundTheClockComponent,
     CricketComponent,
     X01Component,
-    GameHistoryComponent
+    GameHistoryComponent,
+    DashboardComponent,
+    GameSelectComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import { GameHistoryComponent } from './game-history/game-history.component';
       {path: 'X01', component: X01Component},
       {path: 'Cricket', component: CricketComponent},
       {path: 'AroundTheClock', component: AroundTheClockComponent},
+      {path: '', component: DashboardComponent},
+
     ])
   ],
   providers: [],
