@@ -6,7 +6,7 @@ import  { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DartboardComponent } from './dartboard/dartboard.component';
-import { ProfileComponent } from './profile/profile.component';
+import { BoardHistoryComponent } from './board-history/board-history.component';
 import { AroundTheClockComponent } from './games/around-the-clock/around-the-clock.component';
 import { CricketComponent } from './games/cricket/cricket.component';
 import { X01Component } from './games/x01/x01.component';
@@ -16,7 +16,7 @@ import { GameHistoryComponent } from './game-history/game-history.component';
   declarations: [
     AppComponent,
     DartboardComponent,
-    ProfileComponent,
+    BoardHistoryComponent,
     AroundTheClockComponent,
     CricketComponent,
     X01Component,

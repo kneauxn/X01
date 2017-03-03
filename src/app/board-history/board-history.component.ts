@@ -4,17 +4,17 @@ import { IGame } from '../game'
 
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: 'app-board-history',
+  templateUrl: 'board-history.component.html',
+  styleUrls: ['board-history.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class BoardHistoryComponent implements OnInit {
   title: string = 'Board History';
   games: IGame[];
   errorMessage: string;
 
   constructor(private _historyService: HistoryService) {
-    
+
   }
 
   ngOnInit(): void {
