@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameSelectComponent implements OnInit {
 
+  gameSelected: string = '';
+
   constructor() { }
 
   ngOnInit() {

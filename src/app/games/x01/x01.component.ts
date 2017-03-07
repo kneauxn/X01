@@ -52,11 +52,17 @@ function throwValidator(c: AbstractControl): {[key: string]: boolean | null} {
 export class X01Component implements OnInit {
 
   turnInput: FormGroup;
+  turnInput2: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.turnInput = this.formBuilder.group({
+      throw1Var: ['', throwValidator],
+      throw2Var: ['', throwValidator],
+      throw3Var: ['', throwValidator]
+    });
+    this.turnInput2 = this.formBuilder.group({
       throw1Var: ['', throwValidator],
       throw2Var: ['', throwValidator],
       throw3Var: ['', throwValidator]

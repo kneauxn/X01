@@ -20,8 +20,16 @@
   <!--button 3-->
   <div class="container col-md-4">
     <a class="btn btn-primary btn-block"
-       [routerLink]="['/AroundTheClock']">
+       (click)="gameSelected = 'aroundTheClock'">
       Around The Clock
     </a>
   </div>
   <!--END OF GAME SELECT DIV-->
+
+  <div class="container col-md-12"
+  *ngIf="('gameSelected.length')">
+    <h2>
+      Around The Clock Initalization
+    </h2>
+
+  </div>
