@@ -4,7 +4,7 @@
   <!--button 1-->
   <div class="container col-md-4">
     <a class="btn btn-primary btn-block"
-       [routerLink]="['/X01']">
+       (click)="gameSelected = 'x01'">
       X01
     </a>
   </div>
@@ -12,7 +12,7 @@
   <!--button 2-->
   <div class="container col-md-4">
     <a class="btn btn-primary btn-block"
-       [routerLink]="['/Cricket']">
+       (click)="gameSelected = 'cricket'">
       Cricket
     </a>
   </div>
@@ -27,9 +27,37 @@
   <!--END OF GAME SELECT DIV-->
 
   <div class="container col-md-12"
-  *ngIf="('gameSelected.length')">
+       *ngIf="gameSelected === 'x01'">
     <h2>
-      Around The Clock Initalization
+      <!--spelling-->
+      Around The Clock Initialization
     </h2>
+    <a class="btn btn-primary btn-block"
+       [routerLink]="['/X01']">
+      Begin Game
+    </a>
+  </div>
 
+  <div class="container col-md-12"
+       *ngIf="gameSelected === 'cricket'">
+    <h2>
+      <!--spelling-->
+      Cricket Initialization
+    </h2>
+    <a class="btn btn-primary btn-block"
+       [routerLink]="['/Cricket']">
+      Begin Game
+    </a>
+  </div>
+
+  <div class="container col-md-12"
+  *ngIf="gameSelected === 'aroundTheClock'">
+    <h2>
+      <!--spelling-->
+      Around The Clock Initialization
+    </h2>
+    <a class="btn btn-primary btn-block"
+      [routerLink]="['/AroundTheClock']">
+      Begin Game
+    </a>
   </div>

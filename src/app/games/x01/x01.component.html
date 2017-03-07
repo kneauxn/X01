@@ -4,6 +4,11 @@
   </h1>
   <!--player 1 input-->
   <div class="container col-md-6 col-sm-12">
+    <div class="text-center">
+      <h4>
+        Player One Input
+      </h4>
+    </div>
     <form class="form-group" [formGroup]="turnInput">
       <div>
         <!--input 1-->
@@ -98,6 +103,11 @@
 
   <!--player 2 input-->
   <div class="container col-md-6 col-sm-12">
+    <div class="text-center">
+      <h4>
+        Player Two Input
+      </h4>
+    </div>
     <form class="form-group" [formGroup]="turnInput2">
       <div>
         <!--input 1-->
@@ -181,7 +191,7 @@
 
         <div>
           <button
-            class="btn btn-block btn-success"
+            class="btn btn-block btn-success disabled"
             type="submit"
             [disabled]="!turnInput.valid">End Turn
           </button>
