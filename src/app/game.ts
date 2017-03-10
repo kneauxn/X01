@@ -7,4 +7,5 @@ export interface IGame {
     gameType: string;
     gameWinner: string;
     gameLoser: string;
+    gameComplete: boolean;
 }
