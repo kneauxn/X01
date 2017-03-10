@@ -14,15 +14,12 @@ export class X01Service {
   constructor(private _http: Http) {
   }
 
-  getGames(): Observable<IGame[]> {
-    return this._http.get(this._gamesUrl)
-      .map((response: Response) => <IGame[]>response.json())
-      .do(data => console.log('All: ' + JSON.stringify(data)))
-      .catch(this.handleError);
-  }
-
   private createGame(game: IGame, options: RequestOptions): Observable<IGame> {
     game.id = undefined;
+    return this.http.post(this.Url, game, options)
+      .map(this.extractData)
+      .do(data => console.log('createGame: ' + JSON.stringify(data)))
+      .catch(this.handleError);
   }
 
   private handleError(error: Response) {
@@ -43,5 +40,7 @@ export class X01Service {
       gameComplete: false,
     }
   }
+
+
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HistoryService } from '../service/history.service'
+import { HistoryService } from '../services/history.service'
 import { IGame } from '../game'
 
 
