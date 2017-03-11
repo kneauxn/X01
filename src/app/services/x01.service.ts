@@ -15,11 +15,18 @@ export class X01Service {
   constructor(private http: Http) {
   }
 
-  getGame(id: number): Observable<IGame> {
+  getX01Game(id: number): Observable<IGame> {
+    if(id === 0) {
+      return Observable.create((observer: any) => {
+        observer.next(this.initializeX01Game());
+        observer.complete();
+      });
+    };
     // this wont work until I update the API to be able to sort by ID
     const url = '${this._gamesUrl}/${id}';
     return this.http.get(url)
-      .map(this.extractData);
+      .map(this.extractData)
+      .do(data => console.log('getGame: ' + JSON.stringify(data)));
   }
 
   createX01Game(game: IGame): Observable<IGame> {

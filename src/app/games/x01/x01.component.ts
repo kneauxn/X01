@@ -59,7 +59,6 @@ export class X01Component implements OnInit {
 
   errorMessage: string;
 
-
   constructor(private formBuilder: FormBuilder, private x01Service: X01Service) { }
 
   ngOnInit() {
@@ -75,6 +74,8 @@ export class X01Component implements OnInit {
     });
   }
 
+
+
   getX01Game(id: number): void {
     this.x01Service.getGame(id)
       .subscribe(
@@ -82,5 +83,7 @@ export class X01Component implements OnInit {
         (error: any) => this.errorMessage = <any>error
       );
   }
+
+
 
 }
