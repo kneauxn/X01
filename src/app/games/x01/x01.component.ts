@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, AbstractControl } from '@angular/forms'
 
 import { X01Service } from '../../services/x01.service'
+import {IGame} from "../../game";
 
 // import  { ThrowValidators } from '../throw.validator'
 
@@ -56,7 +57,10 @@ export class X01Component implements OnInit {
   turnInput: FormGroup;
   turnInput2: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  errorMessage: string;
+
+
+  constructor(private formBuilder: FormBuilder, private x01Service: X01Service) { }
 
   ngOnInit() {
     this.turnInput = this.formBuilder.group({
@@ -69,6 +73,14 @@ export class X01Component implements OnInit {
       throw2Var: ['', throwValidator],
       throw3Var: ['', throwValidator]
     });
+  }
+
+  getX01Game(id: number): void {
+    this.x01Service.getGame(id)
+      .subscribe(
+        (game: IGame) => this.onGameRetrieved(game),
+        (error: any) => this.errorMessage = <any>error
+      );
   }
 
 }
