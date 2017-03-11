@@ -56,6 +56,8 @@
          [routerLink]="['/X01']">
         Begin Game
       </a>
+      <a class="btn btn-danger btn-block"
+         (click)="gameSelected = ''">Cancel</a>
     </div>
   </div>
 
@@ -68,6 +70,8 @@
        [routerLink]="['/Cricket']">
       Begin Game
     </a>
+    <a class="btn btn-danger btn-block"
+    (click)="gameSelected = ''">Cancel</a>
   </div>
 
   <div class="container col-md-12"
@@ -79,4 +83,6 @@
        [routerLink]="['/AroundTheClock']">
       Begin Game
     </a>
+    <a class="btn btn-danger btn-block"
+       (click)="gameSelected = ''">Cancel</a>
   </div>

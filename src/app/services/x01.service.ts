@@ -14,33 +14,5 @@ export class X01Service {
   constructor(private _http: Http) {
   }
 
-  private createGame(game: IGame, options: RequestOptions): Observable<IGame> {
-    game.id = undefined;
-    return this.http.post(this.Url, game, options)
-      .map(this.extractData)
-      .do(data => console.log('createGame: ' + JSON.stringify(data)))
-      .catch(this.handleError);
-  }
-
-  private handleError(error: Response) {
-    console.error(error);
-    return Observable.throw(error.json().error || 'Server error');
-  }
-
-  initializeGame(): IGame {
-    return {
-      gameNumber: 0,
-      playerOne: 'PLAYER ONE',
-      playerTwo: 'PLAYER TWO',
-      playerOneScore: 301,
-      playerTwoScore: 301,
-      gameType: '301',
-      gameWinner: '',
-      gameLoser: '',
-      gameComplete: false,
-    }
-  }
-
-
 
 }
