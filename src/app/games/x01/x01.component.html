@@ -2,6 +2,59 @@
   <h1>
     {{title}} Game Interface:
   </h1>
+
+  <!--warning block-->
+  <!--I am sure that there is someway to condense this with OR operators-->
+  <div class="container col-md-12">
+          <span class="alert-danger">
+            <!--input 1.1-->
+        <span
+            *ngIf="(turnInput.get('throw1Var').hasError('firstCharInv'))">
+          Each Input must begin with a number or multiplier character.
+        </span>
+        <span *ngIf="(turnInput.get('throw1Var').hasError('invChar'))">
+          Input contains invalid characters.
+        </span>
+        <span *ngIf="(turnInput.get('throw1Var').hasError('invRange'))">
+          Inputted numbers must be within the allowed range.
+        </span>
+        <span *ngIf="(!turnInput.get('throw1Var').valid)">
+          Please see the input guide for more information on allowed inputs
+        </span>
+
+            <!--input 1.2-->
+        <span
+          *ngIf="(turnInput.get('throw2Var').hasError('firstCharInv'))">
+          Each Input must begin with a number or multiplier character.
+        </span>
+        <span *ngIf="(turnInput.get('throw2Var').hasError('invChar'))">
+          Input contains invalid characters.
+        </span>
+        <span *ngIf="(turnInput.get('throw2Var').hasError('invRange'))">
+          Inputted numbers must be within the allowed range.
+        </span>
+        <span *ngIf="(!turnInput.get('throw2Var').valid)">
+          Please see the input guide for more information on allowed inputs
+        </span>
+
+            <!--input 1.3-->
+        <span
+          *ngIf="(turnInput.get('throw3Var').hasError('firstCharInv'))">
+          Each Input must begin with a number or multiplier character.
+        </span>
+        <span *ngIf="(turnInput.get('throw3Var').hasError('invChar'))">
+          Input contains invalid characters.
+        </span>
+        <span *ngIf="(turnInput.get('throw3Var').hasError('invRange'))">
+          Inputted numbers must be within the allowed range.
+        </span>
+        <span *ngIf="(!turnInput.get('throw3Var').valid)">
+          Please see the input guide for more information on allowed inputs
+        </span>
+
+          </span>
+  </div>
+
   <!--player 1 input-->
   <div class="container col-md-6 col-sm-12">
     <div class="text-center">
@@ -18,25 +71,8 @@
                  type="text"
                  placeholder="Throw 1">
         </div>
-        <!--warning block-->
-        <div>
-      <span class="alert-danger"><h3>
-        <span *ngIf="(turnInput.get('throw1Var').hasError('firstCharInv'))">
-          Each Input must begin with a number or multiplier character.
-        </span>
-        <span *ngIf="(turnInput.get('throw1Var').hasError('invChar'))">
-          Input contains invalid characters.
-        </span>
-        <span *ngIf="(turnInput.get('throw1Var').hasError('invRange'))">
-          Inputted numbers must be within the allowed range.
-        </span>
-        <span *ngIf="(!turnInput.get('throw1Var').valid)">
-          Please see the input guide for more information on allowed inputs
-        </span>
-      </h3></span>
-        </div>
-        <!--end of warning block-->
 
+        <br>
 
         <!--input 2-->
         <div>
@@ -45,24 +81,8 @@
                  type="text"
                  placeholder="Throw 2">
         </div>
-        <!--warning block-->
-        <div>
-      <span class="alert-danger"><h3>
-        <span *ngIf="(turnInput.get('throw2Var').hasError('firstCharInv'))">
-          Each Input must begin with a number or multiplier character.
-        </span>
-        <span *ngIf="(turnInput.get('throw2Var').hasError('invChar'))">
-          Input contains invalid characters.
-        </span>
-        <span *ngIf="(turnInput.get('throw2Var').hasError('invRange'))">
-          Inputted numbers must be within the allowed range.
-        </span>
-        <span *ngIf="(!turnInput.get('throw2Var').valid)">
-          Please see the input guide for more information on allowed inputs
-        </span>
-      </h3></span>
-        </div>
-        <!--end of warning block-->
+
+        <br>
 
         <!--input 3-->
         <div>
@@ -71,24 +91,8 @@
                  type="text"
                  placeholder="Throw 3">
         </div>
-        <!--warning block-->
-        <div>
-      <span class="alert-danger"><h3>
-        <span *ngIf="(turnInput.get('throw3Var').hasError('firstCharInv'))">
-          Each Input must begin with a number or multiplier character.
-        </span>
-        <span *ngIf="(turnInput.get('throw3Var').hasError('invChar'))">
-          Input contains invalid characters.
-        </span>
-        <span *ngIf="(turnInput.get('throw3Var').hasError('invRange'))">
-          Inputted numbers must be within the allowed range.
-        </span>
-        <span *ngIf="(!turnInput.get('throw3Var').valid)">
-          Please see the input guide for more information on allowed inputs
-        </span>
-        </h3></span>
-        </div>
-        <!--end of warning block-->
+
+        <br>
 
         <div>
           <button
@@ -199,8 +203,11 @@
     </form>
   </div>
   <!--end of game interface-->
+
+  <div class="container col-md-12"></div>
+
   <div>
-  <app-game-history></app-game-history>
+    <app-game-history></app-game-history>
   </div>
 </div>
 
